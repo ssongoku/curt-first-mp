@@ -1,0 +1,54 @@
+/* pages/goodsList/goodsList.wxss */
+/*主商品区*/
+.container-goods {
+	background: white;
+}
+
+.main-goods {
+	border-top: 1px solid #eee;
+	background: white;
+	display: inline-block;
+}
+
+.main-goods .single-goods {
+	display: block;
+	float: left;
+	width: 50%;
+}
+
+.main-goods image {
+	width: 220rpx;
+	height: 220rpx;
+	display: block;
+	margin: 20rpx auto;
+}
+
+.main-goods .title {
+	display: block;
+	width: 90%;
+	color: #999;
+	font-size: 28rpx;
+	margin: 10rpx 6rpx;
+	height: 60rpx;
+	line-height: 32rpx;
+	overflow: hidden;
+}
+
+.main-goods .summary {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.main-goods .summary text {
+	font-size: 28rpx;
+	margin: 10rpx 20rpx;
+}
+
+.main-goods .summary .price {
+	color: red;
+}
+
+.main-goods .summary .sale {
+	color: gray;
+}

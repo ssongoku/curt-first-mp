@@ -1,0 +1,35 @@
+{
+        "goodsId": 11,
+        "avatar": "../../images/quick/quick1.jpg",
+        "title": "黑桃化妆笔",
+        "price": 100,
+        "salesCount": "4396"
+}
+{
+        "goodsId": 12,
+        "avatar": "../../images/quick/quick2.jpg",
+        "title": "小狸猫零食",
+        "price": 200,
+        "salesCount": "2800"
+}
+{
+        "goodsId": 13,
+        "avatar": "../../images/quick/quick3.jpg",
+        "title": "全套榨汁机",
+        "price": 300,
+        "salesCount": "777"
+}
+{
+        "goodsId": 14,
+        "avatar": "../../images/quick/quick4.jpg",
+        "title": "万能遥控器",
+        "price": 400,
+        "salesCount": "10w+"
+}
+{
+        "goodsId": 15,
+        "avatar": "../../images/quick/quick5.jpg",
+        "title": "大箱包小箱包",
+        "price": 500,
+        "salesCount": "2w+"
+}

@@ -1,0 +1,20 @@
+<!--pages/addressList/addressList.wxml-->
+<scroll-view class="scroll" scroll-y="true">
+  <view wx:for="{{addressList}}" wx:key="{{item._id}}">
+    <view class="product-name-wrap" data-id="{{item._id}}" bindtap='editAddress'>
+      <view class="ui-list-item-info">{{item.name}}
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text> {{item.phone}}
+      </view>
+      <view class="ui-list-item-address">
+        {{item.address}}
+      </view>
+    </view>
+    <view class="ui-list-item-del" data-index="{{index}}" bindtap="delAddress">
+      <view class="delete-text">删除</view>
+    </view>
+  </view>
+  <view class="separate"></view>
+</scroll-view>
+<view class="add-address" bindtap="addAddress">
+  <image class="add-img" src="../../images/add.png"></image>新增地址
+</view>

@@ -1,0 +1,5 @@
+<!--pages/authLogin.wxml-->
+<view>
+  <text>您还未登录</text>
+  <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">开启授权</button>
+</view>

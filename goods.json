@@ -1,0 +1,27 @@
+{
+  "_id": 111,
+  "name": "黑桃化妆笔250ml黑桃化妆笔",
+  "price": 100.00,
+  "originalPrice": 120.00,
+  "bannerImages": [
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick2.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick3.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick4.jpg"
+  ],
+  "detailImages": [
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick2.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick3.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick4.jpg"
+  ],
+  "remark": null,
+  "createDate": 1560660045000,
+  "updateDate": 1523951902000,
+  "clickRate": 122,
+  "buyRate": 0,
+  "stock": 75,
+  "isHot": "0",
+  "isNew": "1",
+  "discount": "9.6"
+}

@@ -1,0 +1,41 @@
+{"index": 1, "name": "爆款新品", "parent": 0, "level": 0}
+{"index": 2, "name": "当季热卖", "parent": 0, "level": 0}
+{"index": 3, "name": "折扣惊喜", "parent": 0, "level": 0}
+{"index": 4, "name": "高档专区", "parent": 0, "level": 0}
+{"index": 11, "name": "男装专区", "parent": 0, "level": 1, "children": [
+    {"index": 111, "name": "T恤", "parent": 11, "level": 2},
+    {"index": 112, "name": "休闲裤", "parent": 11, "level": 2},
+    {"index": 113, "name": "牛仔裤", "parent": 11, "level": 2},
+    {"index": 114, "name": "男士外套", "parent": 11, "level": 2},
+    {"index": 115, "name": "衬衫", "parent": 11, "level": 2},
+    {"index": 116, "name": "特色男装", "parent": 11, "level": 2}
+]}
+{"index": 12, "name": "女装专区", "parent": 0, "level": 1, "children": [
+    {"index": 117, "name": "裙装", "parent": 12, "level": 2},
+    {"index": 118, "name": "女士小衫", "parent": 12, "level": 2},
+    {"index": 119, "name": "外套", "parent": 12, "level": 2},
+    {"index": 120, "name": "裤装", "parent": 12, "level": 2},
+    {"index": 121, "name": "特色类目", "parent": 12, "level": 2}
+]}
+{"index": 13, "name": "母婴童装", "parent": 0, "level": 1, "children": [
+    {"index": 122, "name": "童装", "parent": 13, "level": 2},
+    {"index": 122, "name": "童鞋", "parent": 13, "level": 2},
+    {"index": 122, "name": "妈妈专区", "parent": 13, "level": 2},
+    {"index": 122, "name": "婴童寝居", "parent": 13, "level": 2}
+]}
+{"index": 14, "name": "内衣配饰", "parent": 0, "level": 1, "children": [
+    {"index": 123, "name": "睡衣家居服", "parent": 14, "level": 2},
+    {"index": 124, "name": "大牌文胸", "parent": 14, "level": 2},
+    {"index": 125, "name": "内裤", "parent": 14, "level": 2},
+    {"index": 126, "name": "袜子", "parent": 14, "level": 2},
+    {"index": 127, "name": "塑身", "parent": 14, "level": 2},
+    {"index": 128, "name": "保暖内衣", "parent": 14, "level": 2},
+    {"index": 129, "name": "服饰配件", "parent": 14, "level": 2},
+    {"index": 130, "name": "儿童内衣配饰", "parent": 14, "level": 2}
+]}
+{"index": 15, "name": "运动户外", "parent": 0, "level": 1, "children": [
+    {"index": 131, "name": "运动鞋包", "parent": 15, "level": 2},
+    {"index": 132, "name": "运动服饰", "parent": 15, "level": 2},
+    {"index": 133, "name": "户外鞋服", "parent": 15, "level": 2},
+    {"index": 134, "name": "游泳服饰", "parent": 15, "level": 2}
+]}

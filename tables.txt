@@ -1,0 +1,5 @@
+category: _id, name, parentId, index
+goods: _id, name, categoryId, categoryIndex, shortName, goodsNumber, skuCode
+goodsInfo: _id, goodsId, originPrice, price, salesCount, evaluationCount, salesDate, avatar
+goodsProperty: _id, goodsId, propertyName, propertyValue
+goodsLabel: _id, goodsId, label

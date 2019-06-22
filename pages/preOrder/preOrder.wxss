@@ -1,0 +1,52 @@
+/* pages/preOrder/preOrder.wxss */
+page {
+  background: #f3f4f5;
+  /* font-size: 37.5px;  */
+}
+
+.cart_container {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  margin-bottom: 10rpx;
+}
+
+.scroll {
+  margin-bottom: 120rpx;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* margin-top: 40rpx;  *//* border: 1rpx solid #000000;  */
+}
+
+.sku-count {
+  margin-left: 100rpx;
+  position: absolute;
+  right: 30rpx;
+  margin-top: 30rpx;
+}
+
+.sku-price {
+  color: red;
+  position: relative;
+  margin-top: 30rpx;
+}
+
+.title {
+  font-size: 32rpx;
+  margin-top: 40rpx;
+}
+
+.item-image {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 20rpx;
+}

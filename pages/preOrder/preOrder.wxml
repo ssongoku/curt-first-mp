@@ -1,0 +1,17 @@
+<!--pages/preOrder/preOrder.wxml-->
+<view class="scroll" hidden="{{isEmpty}}">
+  <scroll-view class="scroll" scroll-y="true">
+    <view wx:for="{{payGoods}}" wx:key="{{item.goodsId}}">
+      <view class="cart_container">
+        <image class="item-image" src="{{item.goodsImage}}"></image>
+        <view class="column">
+          <text class="title">{{item.title}}</text>
+          <view class="row">
+            <text class="sku-price">￥{{item.price}}</text>
+            <text class="sku-count">x{{item.count}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

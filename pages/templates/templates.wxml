@@ -1,0 +1,28 @@
+<!--pages/templates/templates.wxml-->
+<template name="quantity">
+  <!-- 主容器 -->  
+  <view class="stepper">  
+      <!-- 减号 -->  
+      <text class="sign {{count <= 1 ? 'disabled' : 'normal'}}" bindtap="delCount" data-index="{{index}}">-</text>  
+      <!-- 数值 -->  
+      <input class="number" type="number" bindchange="bindManual" value="{{count}}"  disabled="disabled"/>  
+      <!-- 加号 -->  
+      <text class="sign {{count >= 10 ? 'disabled' : 'normal'}}" bindtap="addCount" data-index="{{index}}">+</text>  
+  </view>  
+</template>
+<template name="hotGoods">
+<!-- hot goods -->
+<view class='container-goods'>
+  <text class='caption'>热卖推荐</text>
+  <view class='main-goods'>
+    <view class='single-goods' wx:for="{{quickGoods}}" wx:key="{{item.goodsId}}" data-goods-id='{{item.goodsId}}' bindtap='handleGoodsDetail'>
+      <image class="avatar" src='{{item.avatar}}' mode='aspectFit'></image>
+      <text class="title">{{item.title}}</text>
+      <view class="summary">
+        <text class="price">￥{{item.price}}</text>
+        <text class="sale">销量{{item.salesCount}}件</text>
+      </view>
+    </view>
+  </view>
+</view>
+</template>

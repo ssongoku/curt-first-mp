@@ -1,0 +1,40 @@
+<!--pages/addressEdit/addressEdit.wxml-->
+<form class="address-edit" bindsubmit="saveAddress">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">收货人</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" value="{{name}}" bindinput="handleNameChange" placeholder="姓名" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">联系方式</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" type="number" value="{{phone}}" bindblur="handlePhoneChange" placeholder="手机号码" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">收货地址</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="region" value="{{region}}" bindchange="handleRegionChange">
+          <view class="weui-input">{{region[0]}}{{region[1]}}{{region[2]}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">详细地址</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" value="{{detail}}" bindinput="handleDetailChange" placeholder="请输入详细地址" />
+      </view>
+    </view>
+  </view>
+  <button class="weui-btn" type="primary" form-type="submit">保存</button>
+</form>
