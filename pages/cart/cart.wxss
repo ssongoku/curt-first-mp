@@ -124,7 +124,6 @@ page {
 .small_text {
   font-size: 40rpx;
   margin-right: 40rpx;
-  /* margin-left: 10rpx; */
   margin-left: 25rpx;
 }
 
@@ -138,7 +137,15 @@ page {
 .item-allselect {
   width: 40rpx;
   height: 40rpx;
+  margin-left: 20rpx;
   margin-bottom: 20rpx;
+}
+
+.item-noselect {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
 }
 
 .item-image {

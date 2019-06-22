@@ -16,8 +16,10 @@
     <view class="separate"></view>
     <view wx:for="{{cartGoods}}" wx:key="{{item.goodsId}}">
       <view class="cart_container">
-        <icon class="item-select" bindtap="switchSelect" data-index="{{index}}"
-          type="{{item.isSeleted ? 'success' : 'circle'}}" color="{{item.isSeleted ? '#f0145a' : '#ffffff'}}" size="20"></icon>
+        <icon wx:if="{{item.isSeleted}}" class="item-select" bindtap="switchSelect" data-index="{{index}}"
+          type="success" color="red" size="20"></icon>
+        <image wx:if="{{!item.isSeleted}}" class="item-select" bindtap="switchSelect" data-index="{{index}}"
+          src="../../images/circle.png"></image>
         <image class="item-image" src="{{item.goodsImage}}"></image>
         <view class="column">
           <text class="title">{{item.title}}</text>
@@ -37,8 +39,10 @@
 <view class="bottom_total" hidden="{{isEmpty}}">
   <view class="bottom_line"></view>
   <view class="row">
-    <icon class="item-allselect" bindtap="switchSelectAll"
-      type="{{isAllSeleted ? 'success' : 'circle'}}" color="{{isAllSeleted ? '#f0145a' : '#ffffff'}}" size="20"></icon>
+    <icon wx:if="{{isAllSeleted}}" class="item-allselect" bindtap="switchSelectAll"
+      type="success" color="red" size="20"></icon>
+    <image wx:if="{{!isAllSeleted}}" class="item-noselect" bindtap="switchSelectAll"
+        src="../../images/circle.png"></image>
     <text class="small_text">全选</text>
     <text>合计:￥ </text>
     <text class="price">{{totalMoney}}</text>

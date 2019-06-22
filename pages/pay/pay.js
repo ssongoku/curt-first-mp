@@ -1,6 +1,4 @@
-// pages/authLogin.js
-const context = getApp().globalData
-const db = wx.cloud.database
+// pages/pay/pay.js
 Page({
 
   /**
@@ -8,24 +6,6 @@ Page({
    */
   data: {
 
-  },
-  onGetUserInfo: function (e) {
-    if (e.detail.userInfo) {
-      db.collection('address').where({
-        isDeleted: false,
-        isDefault: true
-      }).get().then(response => {
-        if (Array.isArray(response.data) && response.data.length > 0) {
-          response.data[0].isSelected = true
-          context.defaultAddress = response.data[0]
-        }
-      }).catch(error => {
-        console.error(error)
-      })
-      wx.navigateBack({
-        delta: 1
-      })
-    }
   },
 
   /**

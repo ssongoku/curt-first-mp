@@ -1,17 +1,43 @@
 <!--pages/preOrder/preOrder.wxml-->
-<view class="scroll" hidden="{{isEmpty}}">
-  <scroll-view class="scroll" scroll-y="true">
-    <view wx:for="{{payGoods}}" wx:key="{{item.goodsId}}">
-      <view class="cart_container">
-        <image class="item-image" src="{{item.goodsImage}}"></image>
-        <view class="column">
-          <text class="title">{{item.title}}</text>
-          <view class="row">
-            <text class="sku-price">￥{{item.price}}</text>
-            <text class="sku-count">x{{item.count}}</text>
-          </view>
+<view>
+  <view class="product-name-wrap" bindtap="selectAddress">
+    <view class="ui-list-item-info">{{(address && address.name) || ''}}
+      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text> {{(address && address.phone) || ''}}
+    </view>
+    <view wx:if="{{address}}" class="ui-list-item-address">
+      {{address.address}}
+    </view>
+    <view wx:if="{{!address}}" class="ui-list-item-address placeholder">
+      请选择地址
+    </view>
+    <image class="ui-list-item-del" src="../../images/arrow-right.png"></image>
+  </view>
+</view>
+<view class="separate"></view>
+<scroll-view class="scroll" scroll-y="true">
+  <view wx:for="{{payGoods}}" wx:key="{{item.goodsId}}">
+    <view class="cart_container">
+      <image class="item-image" src="{{item.goodsImage}}"></image>
+      <view class="column">
+        <text class="title">{{item.title}}</text>
+        <view class="row">
+          <text class="sku-price">￥{{item.price}}</text>
+          <text class="sku-count">x{{item.count}}</text>
         </view>
       </view>
     </view>
-  </scroll-view>
-</view>
+  </view>
+  <view class="summary-price">
+    <text>商品金额</text>
+    <text class="price red">￥{{goodsPrice}}</text>
+  </view>
+  <view class="summary-price">
+    <text>运费</text>
+    <text class="price red">+￥{{transportPrice}}</text>
+  </view>
+  <view class="actual-price">
+    <text>实付金额：</text>
+    <text class="price red">￥{{goodsPrice + transportPrice}}</text>
+  </view>
+  <button type="primary" bindtap="wxPay">微信支付</button>
+</scroll-view>

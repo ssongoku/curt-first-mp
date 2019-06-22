@@ -1,0 +1,20 @@
+<!--pages/addressSelect/addressSelect.wxml-->
+<scroll-view class="scroll" scroll-y="true">
+  <view wx:for="{{addressList}}" wx:key="{{item._id}}">
+    <icon wx:if="{{item.isSelected}}" class="item-select" bindtap="switchSelect" data-index="{{index}}"
+      type="success" color="red" size="20"></icon>
+    <image wx:if="{{!item.isSelected}}" class="item-select" bindtap="switchSelect" data-index="{{index}}"
+      src="../../images/circle.png"></image>
+    <view class="product-name-wrap" data-id="{{item._id}}" bindtap='editAddress'>
+      <view class="ui-list-item-info">{{item.name}}
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text> {{item.phone}}
+      </view>
+      <view class="ui-list-item-address">
+        {{item.address}}
+      </view>
+    </view>
+    <view class="ui-list-item-del">
+      <image src="../../images/arrow-right.png"></image>
+    </view>
+  </view>
+</scroll-view>

@@ -14,7 +14,9 @@
     "pages/templates/templates",
     "pages/addressList/addressList",
     "pages/addressEdit/addressEdit",
-    "pages/favorite/favorite"
+    "pages/favorite/favorite",
+    "pages/pay/pay",
+    "pages/addressSelect/addressSelect"
   ],
   "window": {
     "backgroundTextStyle": "light",

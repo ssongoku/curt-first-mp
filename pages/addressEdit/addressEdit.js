@@ -1,4 +1,5 @@
 // pages/addressEdit/addressEdit.js
+const context = getApp().globalData
 const db = wx.cloud.database()
 Page({
 
@@ -12,7 +13,8 @@ Page({
     phone: '',
     region: ['北京市', '北京市', '东城区'],
     detail: '',
-    address: ''
+    address: '',
+    isDefault: false
   },
 
   /**
@@ -38,7 +40,8 @@ Page({
               response.data[0].city,
               response.data[0].area
             ],
-            detail: response.data[0].detail
+            detail: response.data[0].detail,
+            isDefault: response.data[0].isDefault || false
           })
         }
       }).catch(error => {
@@ -79,6 +82,11 @@ Page({
       detail: e.detail.value.trim()
     })
   },
+  handleDefaultCheck: function () {
+    this.setData({
+      isDefault: !this.data.isDefault
+    })
+  },
   saveAddress: function () {
     if (!this.data.name) {
       wx.showToast({
@@ -108,10 +116,51 @@ Page({
       city: this.data.region[1],
       area: this.data.region[2],
       detail: this.data.detail,
-      isDeleted: false
+      isDeleted: false,
+      isDefault: this.data.isDefault
     }
     theData.address = theData.province + theData.city + theData.area + theData.detail
-    wx.showLoading({title: '处理中'})
+    if (theData.isDefault) {
+      wx.showLoading({ title: '处理中' })
+      db.collection('address').where({
+        isDeleted: false,
+        isDefault: true
+      }).get().then(response => {
+        if (Array.isArray(response.data) && response.data.length > 0 &&
+          response.data[0]._id !== this.data.addressId) {
+          db.collection('address').doc(response.data[0]._id).update({
+            data: {
+              isDefault: false
+            }
+          }).then(() => {
+            wx.hideLoading()
+            this.postAddress(theData)
+          }).catch(error => {
+            console.log(error)
+            wx.hideLoading()
+            wx.showToast({
+              title: '保存失败',
+              icon: 'none'
+            })
+          })
+        } else {
+          wx.hideLoading()
+          this.postAddress(theData)
+        }
+      }).catch(error => {
+        console.log(error)
+        wx.hideLoading()
+        wx.showToast({
+          title: '保存失败',
+          icon: 'none'
+        })
+      })
+    } else {
+      this.postAddress(theData)
+    }
+  },
+  postAddress: function (theData) {
+    wx.showLoading({ title: '处理中' })
     if (this.data.isAdd) {
       db.collection('address').add({
         data: theData
@@ -121,9 +170,7 @@ Page({
           title: '保存成功',
           icon: 'success'
         })
-        wx.navigateBack({
-          delta: 1
-        })
+        this.setContext(response)
       }).catch(error => {
         console.error(error)
         wx.hideLoading()
@@ -136,14 +183,22 @@ Page({
       db.collection('address').doc(this.data.addressId).update({
         data: theData
       }).then(response => {
+        if (context.defaultAddress && context.defaultAddress._id === this.data.addressId) {
+          context.defaultAddress.name = theData.name
+          context.defaultAddress.phone = theData.phone
+          context.defaultAddress.province = theData.province
+          context.defaultAddress.city = theData.city
+          context.defaultAddress.area = theData.area
+          context.defaultAddress.detail = theData.detail
+          context.defaultAddress.address = theData.address
+          context.defaultAddress.isDefault = theData.isDefault
+        }
         wx.hideLoading()
         wx.showToast({
           title: '保存成功',
           icon: 'success'
         })
-        wx.navigateBack({
-          delta: 1
-        })
+        this.setContext(this.data.addressId)
       }).catch(error => {
         console.error(error)
         wx.hideLoading()
@@ -151,6 +206,32 @@ Page({
           title: '保存失败',
           icon: 'none'
         })
+      })
+    }
+  },
+  setContext: function (addressId) {
+    if (this.data.isDefault && !context.defaultAddress && addressId) {
+      wx.showLoading({
+        title: '',
+      })
+      db.collection('address').doc(addressId).get().then(response => {
+        if (response.data) {
+          context.defaultAddress = response.data
+        }
+        wx.hideLoading()
+        wx.navigateBack({
+          delta: 1
+        })
+      }).catch(error => {
+        console.error(error)
+        wx.hideLoading()
+        wx.navigateBack({
+          delta: 1
+        })
+      })
+    } else {
+      wx.navigateBack({
+        delta: 1
       })
     }
   },

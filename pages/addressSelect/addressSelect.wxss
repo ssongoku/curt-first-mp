@@ -1,0 +1,51 @@
+/* pages/addressSelect/addressSelect.wxss */
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.scroll {
+  margin-bottom: 20rpx;
+}
+
+.item-select {
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 40rpx;
+  margin-left: 20rpx;
+}
+
+.product-name-wrap {
+  margin: 30rpx 20rpx;
+  color: #404040;
+  display: inline-block;
+  width: 75%
+}
+
+.ui-list-item-info {
+  margin: 10rpx 0;
+  font-weight: bold;
+  font-size: 35rpx;
+}
+
+.ui-list-item-address {
+  color: #585c64;
+  font-size: 30rpx;
+}
+
+.ui-list-item-del {
+  display: inline-block;
+  padding-bottom: 20rpx;
+}
+
+.ui-list-item-del image {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.separate {
+  margin: 5px 0px;
+  height: 2rpx;
+  background-color: #f2f2f2;
+}
