@@ -1,4 +1,5 @@
 // pages/pay/pay.js
+const context = getApp().globalData
 Page({
 
   /**
@@ -13,6 +14,41 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+  moniPay: function () {
+    wx.showLoading({
+      title: '处理中',
+      mask: true
+    })
+    wx.cloud.callFunction({
+      name: 'pay',
+      data: {
+        addressId: context.defaultAddress._id,
+        payGoods: context.payGoods,
+        transportPrice: context.transportPrice
+      }
+    }).then(response => {
+      let orderId = response.result.data.orderId
+      wx.hideLoading()
+      wx.showToast({
+        title: '支付成功',
+      })
+      wx.navigateTo({
+        url: '../orderDetail/orderDetail?orderId=' + orderId,
+      })
+    }).catch(error => {
+      console.error(error)
+      wx.hideLoading()
+      wx.showToast({
+        title: '支付失败',
+        icon: 'none'
+      })
+    })
+  },
+  toOrderDetail: function () {
+    wx.navigateTo({
+      url: '../orderDetail/orderDetail',
+    })
   },
 
   /**

@@ -1,2 +1,37 @@
 <!--pages/orderList/orderList.wxml-->
-<text>pages/orderList/orderList.wxml</text>
+<view class="order-list">
+  <block wx:for="{{orderList}}" wx:key="{{item._id}}">
+    <view class="order-item" data-orderId="{{item._id}}" bindtap="toOrderDetail">
+      <view class="row">
+        <view class="left">
+          <text>{{item.statusText}}</text>
+        </view>
+        <view class="right">
+          <text>删除</text>
+        </view>
+      </view>
+      <view class="goods-row">
+        <view class="left img-width">
+          <image src="{{item.payGoods[0].goodsImage}}"></image>
+        </view>
+        <view class="left title-width" wx:if="{{item.count === 1}}">
+          <text>{{item.payGoods[0].title}}</text>
+        </view>
+        <view class="left img-width" wx:if="{{item.count >= 2}}">
+          <image src="{{item.payGoods[1].goodsImage}}"></image>
+        </view>
+        <view class="left img-width" wx:if="{{item.count >= 3}}">
+          <image src="{{item.payGoods[2].goodsImage}}"></image>
+        </view>
+        <view class="right price-width">
+          <view class="price">
+            <text>￥{{item.payAmount}}</text>
+          </view>
+          <view wx:if="{{item.count >= 2}}">
+            <text>共{{item.count}}件</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

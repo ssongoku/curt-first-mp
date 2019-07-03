@@ -5,7 +5,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    orderList: [{
+      _id: 123,
+      status: 2,
+      statusText: '待发货',
+      count: 2,
+      payAmount: 5.80,
+      payGoods: [{
+        goodsImage: 'cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg',
+        title: '这是测试商品标题...'
+      }, {
+          goodsImage: 'cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg',
+          title: '这是测试商品标题...'
+      }]
+    }, {
+        _id: 1234,
+        status: 2,
+        statusText: '待发货',
+        count: 3,
+        payAmount: 5.80,
+        payGoods: [{
+          goodsImage: 'cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg',
+          title: '这是测试商品标题...'
+        }, {
+          goodsImage: 'cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg',
+          title: '这是测试商品标题...'
+          }, {
+            goodsImage: 'cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg',
+            title: '这是测试商品标题...'
+        }]
+    }]
   },
 
   /**
@@ -13,6 +42,12 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+  toOrderDetail: function (e) {
+    let orderId = e.currentTarget.dataset.orderId
+    wx.navigateTo({
+      url: '../orderDetail/orderDetail?orderId=' + orderId,
+    })
   },
 
   /**

@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    goodsId: 111,
+    goodsId: '',
     isLike: false,
     likeId: '',
     showDialog: false,
@@ -21,6 +21,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if (!options.goodsId) {
+      return false
+    }
+    this.setData({
+      goodsId: Number(options.goodsId) || options.goodsId
+    })
     db.collection('goods').where({_id: this.data.goodsId}).get().then(response => {
       if (Array.isArray(response.data) && response.data.length > 0) {
         let theGoods = response.data[0]

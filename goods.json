@@ -1,6 +1,7 @@
 {
   "_id": 111,
   "name": "黑桃化妆笔250ml黑桃化妆笔",
+  "number": 110001,
   "price": 100.00,
   "originalPrice": 120.00,
   "bannerImages": [
@@ -23,5 +24,287 @@
   "stock": 75,
   "isHot": "0",
   "isNew": "1",
-  "discount": "9.6"
+  "discount": "9.6",
+  "salesCount": "4396",
+  "isActive": true,
+  "isDeleted": false
+}
+{
+  "_id": 112,
+  "name": "小狸猫零食300g300g食小狸猫100g小狸猫150g狸猫零食小狸猫零食",
+  "number": 110002,
+  "price": 200.00,
+  "originalPrice": 220.00,
+  "bannerImages": [
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick2.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick3.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick4.jpg"
+  ],
+  "detailImages": [
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick2.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick3.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick4.jpg"
+  ],
+  "remark": null,
+  "createDate": 1560660045000,
+  "updateDate": 1523951902000,
+  "clickRate": 112,
+  "buyRate": 12,
+  "stock": 112,
+  "isHot": "0",
+  "isNew": "1",
+  "discount": "9.6",
+  "salesCount": "2800",
+  "isActive": true,
+  "isDeleted": false
+}
+{
+  "_id": 113,
+  "name": "全套榨汁机300ml全套榨汁机500ml全套榨汁机全套榨汁机",
+  "number": 110003,
+  "price": 300.00,
+  "originalPrice": 320.00,
+  "bannerImages": [
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick2.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick3.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick4.jpg"
+  ],
+  "detailImages": [
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick2.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick3.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick4.jpg"
+  ],
+  "remark": null,
+  "createDate": 1560660045000,
+  "updateDate": 1523951902000,
+  "clickRate": 113,
+  "buyRate": 13,
+  "stock": 113,
+  "isHot": "0",
+  "isNew": "1",
+  "discount": "9.6",
+  "salesCount": "777",
+  "isActive": true,
+  "isDeleted": false
+}
+{
+  "_id": 114,
+  "name": "万能遥控器空调电视机电风扇电饭煲微波热水器",
+  "number": 110003,
+  "price": 400.00,
+  "originalPrice": 420.00,
+  "bannerImages": [
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick2.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick3.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick4.jpg"
+  ],
+  "detailImages": [
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick2.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick3.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick4.jpg"
+  ],
+  "remark": null,
+  "createDate": 1560660045000,
+  "updateDate": 1523951902000,
+  "clickRate": 114,
+  "buyRate": 14,
+  "stock": 114,
+  "isHot": "0",
+  "isNew": "1",
+  "discount": "9.6",
+  "salesCount": "10w+",
+  "isActive": true,
+  "isDeleted": false
+}
+{
+  "_id": 115,
+  "name": "大箱包小箱包123x333x441大箱包小箱包大箱包小箱包",
+  "number": 110002,
+  "price": 500.00,
+  "originalPrice": 520.00,
+  "bannerImages": [
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick2.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick3.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick4.jpg"
+  ],
+  "detailImages": [
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick2.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick3.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick4.jpg"
+  ],
+  "remark": null,
+  "createDate": 1560660045000,
+  "updateDate": 1523951902000,
+  "clickRate": 115,
+  "buyRate": 15,
+  "stock": 115,
+  "isHot": "0",
+  "isNew": "1",
+  "discount": "9.6",
+  "salesCount": "2w+",
+  "isActive": true,
+  "isDeleted": false
+}
+{
+  "_id": 1,
+  "name": "这是首页banner1的商品的商品的商品",
+  "number": 110005,
+  "price": 500.00,
+  "originalPrice": 520.00,
+  "bannerImages": [
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick2.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick3.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick4.jpg"
+  ],
+  "detailImages": [
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick2.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick3.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick4.jpg"
+  ],
+  "remark": null,
+  "createDate": 1560660045000,
+  "updateDate": 1523951902000,
+  "clickRate": 115,
+  "buyRate": 15,
+  "stock": 115,
+  "isHot": "0",
+  "isNew": "1",
+  "discount": "9.8",
+  "salesCount": "2800",
+  "isActive": true,
+  "isDeleted": false
+}
+{
+  "_id": 2,
+  "name": "这是这是首页banner2banner2的商品图片图片",
+  "number": 110005,
+  "price": 2500.00,
+  "originalPrice": 2520.00,
+  "bannerImages": [
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick2.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick3.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick4.jpg"
+  ],
+  "detailImages": [
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick2.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick3.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick4.jpg"
+  ],
+  "remark": null,
+  "createDate": 1560660045000,
+  "updateDate": 1523951902000,
+  "clickRate": 1125,
+  "buyRate": 12,
+  "stock": 112,
+  "isHot": "0",
+  "isNew": "1",
+  "discount": "9.6",
+  "salesCount": "2200",
+  "isActive": true,
+  "isDeleted": false
+}
+{
+  "_id": 3,
+  "name": "这是首页首页banner3商品banner3的商品图片图片",
+  "number": 110005,
+  "price": 3500.00,
+  "originalPrice": 3520.00,
+  "bannerImages": [
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick2.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick3.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick4.jpg"
+  ],
+  "detailImages": [
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick2.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick3.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick4.jpg"
+  ],
+  "remark": null,
+  "createDate": 1560660045000,
+  "updateDate": 1523951902000,
+  "clickRate": 1135,
+  "buyRate": 13,
+  "stock": 113,
+  "isHot": "0",
+  "isNew": "1",
+  "discount": "9.6",
+  "salesCount": "3200",
+  "isActive": true,
+  "isDeleted": false
+}
+{
+  "_id": 4,
+  "name": "这是$%^&首页banner4$%^&这是首页4首页",
+  "number": 110004,
+  "price": 4500.00,
+  "originalPrice": 4520.00,
+  "bannerImages": [
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick2.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick3.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick4.jpg"
+  ],
+  "detailImages": [
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick2.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick3.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick4.jpg"
+  ],
+  "remark": null,
+  "createDate": 1560660045000,
+  "updateDate": 1523951902000,
+  "clickRate": 1145,
+  "buyRate": 14,
+  "stock": 114,
+  "isHot": "0",
+  "isNew": "1",
+  "discount": "9.6",
+  "salesCount": "4200",
+  "isActive": true,
+  "isDeleted": false
+}
+{
+  "_id": 5,
+  "name": "首页5这是banner5在首页热卖banner5",
+  "number": 110005,
+  "price": 2500.00,
+  "originalPrice": 2550.00,
+  "bannerImages": [
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick2.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick3.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick4.jpg"
+  ],
+  "detailImages": [
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick1.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick2.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick3.jpg",
+    "cloud://dev-curtfirstmp.6465-dev-curtfirstmp-1259404027/quick4.jpg"
+  ],
+  "remark": null,
+  "createDate": 1560660045000,
+  "updateDate": 1523951902000,
+  "clickRate": 1155,
+  "buyRate": 15,
+  "stock": 115,
+  "isHot": "0",
+  "isNew": "1",
+  "discount": "9.6",
+  "salesCount": "5200",
+  "isActive": true,
+  "isDeleted": false
 }

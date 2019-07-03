@@ -1,1 +1,51 @@
 /* pages/orderList/orderList.wxss */
+
+.order-item {
+  background-color: #eee;
+  margin-bottom: 20rpx;
+}
+
+.row {
+  padding: 20rpx;
+  height: 40rpx;
+  width: 95%
+}
+
+.goods-row {
+  height: 180rpx;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.img-width {
+  width: 22%;
+  padding: 20rpx;
+}
+
+.img-width image {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.title-width {
+  width: 48%;
+  padding: 20rpx;
+  padding-top: 50rpx;
+}
+
+.price-width {
+  width: 100rpx;
+  padding: 20rpx;
+}
+
+.price {
+  text-align: center;
+  margin-top: 30rpx;
+  margin-bottom: 10rpx;
+}

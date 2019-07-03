@@ -1,2 +1,79 @@
 <!--pages/orderDetail/orderDetail.wxml-->
-<text>pages/orderDetail/orderDetail.wxml</text>
+<view>
+  <text>订单状态：</text>
+  <text>{{orderDetail.statusText}}</text>
+</view>
+<view>
+  <view>
+    <text>{{address.name}}</text>
+    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+    <text>{{address.phone}}</text>
+  </view>
+  <view>
+    <text>{{address.address}}</text>
+  </view>
+</view>
+<view>
+  <view>
+    <text>共计{{orderDetail.count}}件商品</text>
+  </view>
+  <block wx:for="{{orderDetail.payGoods}}" wx:key="{{item._id}}">
+    <view class="cart_container">
+      <image class="item-image" src="{{item.goodsImage}}"></image>
+      <view class="column">
+        <text class="title">{{item.title}}</text>
+        <view class="row">
+          <text class="sku-price">￥{{item.price}}</text>
+          <text class="sku-count">x{{item.count}}</text>
+        </view>
+      </view>
+    </view>
+    <view>
+      <button>申请售后</button>
+    </view>
+    <view class="separate"></view>
+  </block>
+  <view>
+    <text>联系客服</text>
+  </view>
+</view>
+<view>
+  <view>
+    <text>订单编号：</text>
+    <text>{{orderDetail.orderNumber}}</text>
+  </view>
+  <view>
+    <text>下单时间：</text>
+    <text>{{orderDetail.orderTime}}</text>
+  </view>
+  <view>
+    <text>支付方式：</text>
+    <text>{{orderDetail.payWay}}</text>
+  </view>
+</view>
+<view>
+  <view>
+    <view>商品金额</view>
+    <view>
+      <text>￥{{orderDetail.goodsPrice}}</text>
+    </view>
+  </view>
+  <view>
+    <view>运费</view>
+    <view>
+      <text>+￥{{orderDetail.transportPrice}}</text>
+    </view>
+  </view>
+  <view>
+    <view>返现</view>
+    <view>
+      <text>-￥{{orderDetail.reward}}</text>
+    </view>
+  </view>
+  <view>
+    <view>
+      <text>实付金额：</text>
+      <text>￥{{orderDetail.payAmount}}</text>
+    </view>
+  </view>
+</view>
