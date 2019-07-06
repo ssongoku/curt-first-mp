@@ -8,21 +8,11 @@
   </block>
 </swiper>
 <view class='func-area'>
-  <view data-index='1' bindtap='navigateGoodsList'>
-    <image src='../../images/icon_all.png' mode='aspectFit' class='orange'></image>
-    <text>爆款新品</text>
-  </view>
-  <view data-index='2' bindtap='navigateGoodsList'>
-    <image src='../../images/icon_all.png' mode='aspectFit' class='orange'></image>
-    <text>当季热卖</text>
-  </view>
-  <view data-index='3' bindtap='navigateGoodsList'>
-    <image src='../../images/icon_all.png' mode='aspectFit' class='orange'></image>
-    <text>折扣惊喜</text>
-  </view>
-  <view data-index='4' bindtap='navigateGoodsList'>
-    <image src='../../images/icon_all.png' mode='aspectFit' class='orange'></image>
-    <text>高档专区</text>
-  </view>
+  <block wx:for="{{quickCategory}}" wx:key="{{item.index}}">
+    <view data-index="{{item.index}}" bindtap='navigateGoodsList'>
+      <image src="{{item.imgUrl}}" mode='aspectFit'></image>
+      <text>{{item.name}}</text>
+    </view>
+  </block>
 </view>
 <template is="hotGoods" data="{{ quickGoods }}" />

@@ -8,6 +8,7 @@ Page({
   data: {
     bannerGoods: [],
     quickGoods: [],
+    quickCategory: []
     // userInfo: {},
     // hasUserInfo: false,
     // canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -22,31 +23,36 @@ Page({
   },
   onLoad: function(option) {
     // 获取banner商品
-    db.collection('quickGoods')
-      .where({
-        location: 'index-banner'
-      }).get()
-      .then(response => {
-        this.setData({
-          bannerGoods: response.data
-        })
+    db.collection('quickGoods').where({
+      location: 'index-banner'
+    }).get().then(response => {
+      this.setData({
+        bannerGoods: response.data
       })
-      .catch(error => {
-        console.error(error)
-      })
+    }).catch(error => {
+      console.error(error)
+    })
     // 获取推荐商品
-    db.collection('quickGoods')
-      .where({
-        location: 'index-hot'
-      }).get()
-      .then(response => {
-        this.setData({
-          quickGoods: response.data
-        })
+    db.collection('quickGoods').where({
+      location: 'index-hot'
+    }).get().then(response => {
+      this.setData({
+        quickGoods: response.data
       })
-      .catch(error => {
-        console.error(error)
+    }).catch(error => {
+      console.error(error)
+    })
+    // 获取快速分类
+    db.collection('category').where({
+      level: 0,
+      isDeleted: false,
+    }).get().then(response => {
+      this.setData({
+        quickCategory: response.data
       })
+    }).catch(error => {
+      console.error(error)
+    })
   },
   SonLoad: function() {
     if (app.globalData.userInfo) {
