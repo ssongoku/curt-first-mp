@@ -8,6 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    preOrderId: '',
     payGoods: [],
     address: null,
     goodsPrice: 0,
@@ -18,6 +19,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let preOrderId
+    if (context.preOrderId) {
+      preOrderId = context.preOrderId
+    } else {
+      preOrderId = Date.now()
+      context.preOrderId = preOrderId
+    }
+    this.setData({
+      preOrderId: preOrderId
+    })
+
     let total = 0
     context.payGoods.forEach(goods => {
       goods.title = goods.goodsName.substr(0, 15) + '...'
@@ -64,6 +76,24 @@ Page({
         address: context.defaultAddress
       })
     }
+    db.collection('order').where({
+      preOrderId: this.data.preOrderId,
+      isDeleted: false
+    }).get().then(response => {
+      if (Array.isArray(response.data) && response.data.length > 0) {
+        wx.showToast({
+          title: '此订单已支付',
+          duration: 2000
+        })
+        setTimeout(() => {
+          wx.navigateTo({
+            url: '../orderDetail/orderDetail?orderId=' + response.data[0]._id
+          })
+        }, 2000)
+      }
+    }).catch(error => {
+      console.error(error)
+    })
   },
 
   /**

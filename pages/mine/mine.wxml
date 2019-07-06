@@ -13,9 +13,9 @@
 </view>
 <!-- 1.待付款，2.待发货，3.待收货，4.待评价 -->
 <view class="order-area">
-	<view bindtap="navigateOrderList" class="order" data-status="1">
+	<view bindtap="navigateOrderList" class="order" data-status="2">
 		<image src="../../images/icon_order.png" />
-		<text>待付款</text>
+		<text>待发货</text>
 	</view>
 	<view bindtap="navigateOrderList" class="order" data-status="3">
 		<image src="../../images/icon_order.png" />

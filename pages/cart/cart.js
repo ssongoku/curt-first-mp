@@ -102,7 +102,11 @@ Page({
     let index = parseInt(e.target.dataset.index)
     let theGoods = this.data.cartGoods[index]
     wx.showLoading({ title: '处理中' })
-    db.collection('cart').doc(theGoods._id).remove().then(response => {
+    db.collection('cart').doc(theGoods._id).update({
+      data: {
+        isDeleted: true
+      }
+    }).then(response => {
       this.data.cartGoods.splice(index, 1)
       wx.hideLoading()
       if (this.data.cartGoods.length === 0) {

@@ -1,5 +1,6 @@
 // pages/goodsDetail/goodsDetail.js
 const db = wx.cloud.database()
+const app = getApp()
 Page({
 
   /**
@@ -64,7 +65,7 @@ Page({
   },
   addLike: function (e) {
     if (!this.data.isLike) {
-      wx.showLoading({ title: '处理中' })
+      wx.showLoading({ title: '处理中', mask: true })
       db.collection('goodsLike').add({
         data: {
           goodsId: this.data.goodsId
@@ -90,7 +91,7 @@ Page({
         })
       })
     } else {
-      wx.showLoading({ title: '处理中' })
+      wx.showLoading({ title: '处理中', mask: true })
       db.collection('goodsLike').doc(this.data.likeId).remove().then(response => {
         this.setData({
           isLike: false,
@@ -133,7 +134,7 @@ Page({
     this.recalculateMoney(theGoods)
   },
   addCar: function (e) {
-    wx.showLoading({ title: '处理中' })
+    wx.showLoading({ title: '处理中', mask: true })
     db.collection('cart').where({goodsId: this.data.goodsId, isDeleted: false}).get().then(response => {
       if (Array.isArray(response.data) && response.data.length > 0) {
         let oldGoods = response.data[0]
@@ -209,8 +210,35 @@ Page({
     wx.switchTab({ url: '../cart/cart' })
   },
   immeBuy: function () {
-    wx.navigateTo({
-      url: '../preOrder/preOrder'
+    app.globalData.payGoods = [{
+      goodsId: this.data.goodsId,
+      goodsImage: this.data.goods.bannerImages[0],
+      goodsName: this.data.goods.name,
+      goodsNumber: this.data.goods.number,
+      price: this.data.goods.price,
+      count: this.data.goods.count,
+      goodsMoney: this.data.goods.totalMoney,
+      isDeleted: false
+    }]
+    wx.getSetting({
+      success: response => {
+        if (!response.authSetting['scope.userInfo']) {
+          wx.navigateTo({
+            url: '../authLogin/authLogin'
+          })
+        } else {
+          wx.navigateTo({
+            url: '../preOrder/preOrder'
+          })
+        }
+      },
+      fail: response => {
+        console.error(response)
+        wx.showToast({
+          title: '获取授权信息失败',
+          icon: 'none'
+        })
+      }
     })
   },
 

@@ -25,7 +25,8 @@ Page({
       data: {
         addressId: context.defaultAddress._id,
         payGoods: context.payGoods,
-        transportPrice: context.transportPrice
+        transportPrice: context.transportPrice,
+        preOrderId: context.preOrderId
       }
     }).then(response => {
       if (response.result.code === '200') {
@@ -34,6 +35,8 @@ Page({
         wx.showToast({
           title: '支付成功',
         })
+        context.payGoods = []
+        context.preOrderId = null
         wx.navigateTo({
           url: '../orderDetail/orderDetail?orderId=' + orderId,
         })
@@ -42,16 +45,28 @@ Page({
         wx.hideLoading()
         wx.showToast({
           title: '支付失败',
-          icon: 'none'
+          icon: 'none',
+          duration: 2000
         })
+        setTimeout(() => {
+          wx.navigateBack({
+            delta: 1
+          })
+        }, 2000)
       }
     }).catch(error => {
       console.error(error)
       wx.hideLoading()
       wx.showToast({
         title: '支付失败',
-        icon: 'none'
+        icon: 'none',
+        duration: 2000
       })
+      setTimeout(() => {
+        wx.navigateBack({
+          delta: 1
+        })
+      }, 2000)
     })
   },
   toOrderDetail: function () {
@@ -71,7 +86,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    if (!context.preOrderId) {
+      wx.switchTab({
+        url: '../index/index',
+      })
+    }
   },
 
   /**
