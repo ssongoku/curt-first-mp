@@ -1,41 +1,41 @@
-{"index": 1, "name": "爆款新品", "parent": 0, "level": 0}
-{"index": 2, "name": "当季热卖", "parent": 0, "level": 0}
-{"index": 3, "name": "折扣惊喜", "parent": 0, "level": 0}
-{"index": 4, "name": "高档专区", "parent": 0, "level": 0}
+{"index": 1, "name": "爆款新品", "parent": 0, "level": 0, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/3dc275b65a96a3b20d61ae07868d94a8.png", "isDeleted": false}
+{"index": 2, "name": "当季热卖", "parent": 0, "level": 0, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/def9387cc732603645a0363d7f86b3d2.png", "isDeleted": false}
+{"index": 3, "name": "折扣惊喜", "parent": 0, "level": 0, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/d5ee6759f3db34e676c5a40c69ee110a.png", "isDeleted": false}
+{"index": 4, "name": "高档专区", "parent": 0, "level": 0, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/0e08936fce1dd3dc313f5439e430441d.png", "isDeleted": false}
 {"index": 11, "name": "男装专区", "parent": 0, "level": 1, "children": [
-    {"index": 111, "name": "T恤", "parent": 11, "level": 2},
-    {"index": 112, "name": "休闲裤", "parent": 11, "level": 2},
-    {"index": 113, "name": "牛仔裤", "parent": 11, "level": 2},
-    {"index": 114, "name": "男士外套", "parent": 11, "level": 2},
-    {"index": 115, "name": "衬衫", "parent": 11, "level": 2},
-    {"index": 116, "name": "特色男装", "parent": 11, "level": 2}
-]}
+    {"index": 111, "name": "T恤", "parent": 11, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/d4f0276a2522833a7825fe897c9c965f.png", "isDeleted": false},
+    {"index": 112, "name": "休闲裤", "parent": 11, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/addd12122fd674c6cd09d91164e733b0.png", "isDeleted": false},
+    {"index": 113, "name": "牛仔裤", "parent": 11, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/91d97e9e6e19199c7694a75d27796ba0.png", "isDeleted": false},
+    {"index": 114, "name": "男士外套", "parent": 11, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/9cfed839844801ebbba2a166ed44c3e2.png", "isDeleted": false},
+    {"index": 115, "name": "衬衫", "parent": 11, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/3f07c34523420f9641da22ce2d524c27.png", "isDeleted": false},
+    {"index": 116, "name": "特色男装", "parent": 11, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/4a55c61bf5a9f2db32314373e9d67752.png", "isDeleted": false}
+], isDeleted: false}
 {"index": 12, "name": "女装专区", "parent": 0, "level": 1, "children": [
-    {"index": 117, "name": "裙装", "parent": 12, "level": 2},
-    {"index": 118, "name": "女士小衫", "parent": 12, "level": 2},
-    {"index": 119, "name": "外套", "parent": 12, "level": 2},
-    {"index": 120, "name": "裤装", "parent": 12, "level": 2},
-    {"index": 121, "name": "特色类目", "parent": 12, "level": 2}
-]}
+    {"index": 117, "name": "裙装", "parent": 12, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/6ea5a5106535d29a01e2433a66fb9d84.png", "isDeleted": false},
+    {"index": 118, "name": "女士小衫", "parent": 12, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/c2272dd9643659083bd0426bca359fc5.png", "isDeleted": false},
+    {"index": 119, "name": "外套", "parent": 12, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/c24b6fd5672bd5d858236450828d7ee5.png", "isDeleted": false},
+    {"index": 120, "name": "裤装", "parent": 12, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/acbc283e3fccd0ddefa6ac0c7198eb64.png", "isDeleted": false},
+    {"index": 121, "name": "特色类目", "parent": 12, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/7ff611900c3a29d37036c368b159bad0.png", "isDeleted": false}
+], isDeleted: false}
 {"index": 13, "name": "母婴童装", "parent": 0, "level": 1, "children": [
-    {"index": 122, "name": "童装", "parent": 13, "level": 2},
-    {"index": 122, "name": "童鞋", "parent": 13, "level": 2},
-    {"index": 122, "name": "妈妈专区", "parent": 13, "level": 2},
-    {"index": 122, "name": "婴童寝居", "parent": 13, "level": 2}
-]}
+    {"index": 122, "name": "童装", "parent": 13, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/9f88f64f9c706109dbc3a0b664fce3d2.png", "isDeleted": false},
+    {"index": 122, "name": "童鞋", "parent": 13, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/baf3ec186d3f72cc0dd68081eb31708f.png", "isDeleted": false},
+    {"index": 122, "name": "妈妈专区", "parent": 13, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/c92d2044e402bcdb9489ce0ac8e04208.png", "isDeleted": false},
+    {"index": 122, "name": "婴童寝居", "parent": 13, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/903ae9a75feae012cb35875d2399f2ef.png", "isDeleted": false}
+], isDeleted: false}
 {"index": 14, "name": "内衣配饰", "parent": 0, "level": 1, "children": [
-    {"index": 123, "name": "睡衣家居服", "parent": 14, "level": 2},
-    {"index": 124, "name": "大牌文胸", "parent": 14, "level": 2},
-    {"index": 125, "name": "内裤", "parent": 14, "level": 2},
-    {"index": 126, "name": "袜子", "parent": 14, "level": 2},
-    {"index": 127, "name": "塑身", "parent": 14, "level": 2},
-    {"index": 128, "name": "保暖内衣", "parent": 14, "level": 2},
-    {"index": 129, "name": "服饰配件", "parent": 14, "level": 2},
-    {"index": 130, "name": "儿童内衣配饰", "parent": 14, "level": 2}
-]}
+    {"index": 123, "name": "睡衣家居服", "parent": 14, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/c82bacb86f67dadd11807da907e07622.png", "isDeleted": false},
+    {"index": 124, "name": "大牌文胸", "parent": 14, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/b0b716ca5e8f987383922da5be762d3f.png", "isDeleted": false},
+    {"index": 125, "name": "内裤", "parent": 14, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/60c6d36b87372aa901ed37c35470371d.png", "isDeleted": false},
+    {"index": 126, "name": "袜子", "parent": 14, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/ca5f4717466fe7f9ec8e2924a7305aba.png", "isDeleted": false},
+    {"index": 127, "name": "塑身", "parent": 14, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/723427f606ae858686134d52e0673c61.png", "isDeleted": false},
+    {"index": 128, "name": "保暖内衣", "parent": 14, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/33ace934af12fa47abf20ef4bc423376.png", "isDeleted": false},
+    {"index": 129, "name": "服饰配件", "parent": 14, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/32fe0e7d431552a86b37e171b1ccaa47.png", "isDeleted": false},
+    {"index": 130, "name": "儿童内衣配饰", "parent": 14, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/6d3ef24b56a4af06f8f704928f19ead3.png", "isDeleted": false}
+], isDeleted: false}
 {"index": 15, "name": "运动户外", "parent": 0, "level": 1, "children": [
-    {"index": 131, "name": "运动鞋包", "parent": 15, "level": 2},
-    {"index": 132, "name": "运动服饰", "parent": 15, "level": 2},
-    {"index": 133, "name": "户外鞋服", "parent": 15, "level": 2},
-    {"index": 134, "name": "游泳服饰", "parent": 15, "level": 2}
-]}
+    {"index": 131, "name": "运动鞋包", "parent": 15, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/b75d4fe64b2967e7767577e3effbab53.png", "isDeleted": false},
+    {"index": 132, "name": "运动服饰", "parent": 15, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/13e8faef27c4dde984336d4b3e4b05d2.png", "isDeleted": false},
+    {"index": 133, "name": "户外鞋服", "parent": 15, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/61d77439ee2c66a2eddf01c5c6856f37.png", "isDeleted": false},
+    {"index": 134, "name": "游泳服饰", "parent": 15, "level": 2, "imgUrl": "cloud://py-dev.7079-py-dev-1259595053/images/fec063eddc2ccd374878ddd0a9c0256e.png", "isDeleted": false}
+], isDeleted: false}
