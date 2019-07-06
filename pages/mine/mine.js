@@ -39,10 +39,17 @@ Page({
       })
     }
   },
-  navigateOrderList: function () {
-    wx.navigateTo({
-      url: '../orderList/orderList?status=' + e.currentTarget.dataset.status
-    })
+  navigateOrderList: function (e) {
+    let status = e.currentTarget.dataset.status
+    if (status === 0) {
+      wx.navigateTo({
+        url: '../orderList/orderList'
+      })
+    } else {
+      wx.navigateTo({
+        url: '../orderList/orderList?status=' + status
+      })
+    }
   },
   navigateAfterSales: function () {
     wx.navigateTo({

@@ -25,8 +25,10 @@ Page({
     })
     this.setData({
       payGoods: context.payGoods,
-      goodsPrice: total
+      goodsPrice: total,
+      transportPrice: 0.00
     })
+    context.transportPrice = this.data.transportPrice
   },
   selectAddress: function () {
     wx.navigateTo({

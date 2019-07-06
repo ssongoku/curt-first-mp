@@ -13,7 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(context)
   },
   moniPay: function () {
     wx.showLoading({
@@ -28,14 +28,23 @@ Page({
         transportPrice: context.transportPrice
       }
     }).then(response => {
-      let orderId = response.result.data.orderId
-      wx.hideLoading()
-      wx.showToast({
-        title: '支付成功',
-      })
-      wx.navigateTo({
-        url: '../orderDetail/orderDetail?orderId=' + orderId,
-      })
+      if (response.result.code === '200') {
+        let orderId = response.result.data.orderId
+        wx.hideLoading()
+        wx.showToast({
+          title: '支付成功',
+        })
+        wx.navigateTo({
+          url: '../orderDetail/orderDetail?orderId=' + orderId,
+        })
+      } else {
+        console.error(response.result.data)
+        wx.hideLoading()
+        wx.showToast({
+          title: '支付失败',
+          icon: 'none'
+        })
+      }
     }).catch(error => {
       console.error(error)
       wx.hideLoading()

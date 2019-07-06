@@ -1,7 +1,7 @@
 <!--pages/orderList/orderList.wxml-->
-<view class="order-list">
+<view class="order-list" wx:if="{{orderList.length > 0}}">
   <block wx:for="{{orderList}}" wx:key="{{item._id}}">
-    <view class="order-item" data-orderId="{{item._id}}" bindtap="toOrderDetail">
+    <view class="order-item" data-order-id="{{item._id}}" bindtap="toOrderDetail">
       <view class="row">
         <view class="left">
           <text>{{item.statusText}}</text>
@@ -34,4 +34,7 @@
       </view>
     </view>
   </block>
+</view>
+<view wx:if="{{orderList.length == 0}}">
+  <text>没有订单哟~</text>
 </view>

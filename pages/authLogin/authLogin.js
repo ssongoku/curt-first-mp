@@ -1,6 +1,6 @@
 // pages/authLogin.js
 const context = getApp().globalData
-const db = wx.cloud.database
+const db = wx.cloud.database()
 Page({
 
   /**

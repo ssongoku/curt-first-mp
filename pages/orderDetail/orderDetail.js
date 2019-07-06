@@ -1,4 +1,5 @@
 // pages/orderDetail/orderDetail.js
+const utils = require('../../utils/util.js')
 const db = wx.cloud.database()
 Page({
 
@@ -44,7 +45,49 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    if (!options.orderId) {
+      return false
+    }
+    this.setData({
+      orderId: Number(options.orderId) || options.orderId
+    })
+    db.collection('order').doc(this.data.orderId).get().then(response => {
+      if (response.data) {
+        response.data.orderTime = utils.formatTime(new Date(response.data.orderTime))
+        db.collection('address').doc(response.data.addressId).get().then(response => {
+          if (response.data) {
+            this.setData({
+              address: response.data
+            })
+          } else {
+            wx.showToast({
+              title: '获取地址信息失败',
+              icon: 'none'
+            })
+          }
+        }).catch(error => {
+          console.error(error)
+          wx.showToast({
+            title: '获取地址信息失败',
+            icon: 'none'
+          })
+        })
+        this.setData({
+          orderDetail: response.data
+        })
+      } else {
+        wx.showToast({
+          title: '获取订单详情失败',
+          icon: 'none'
+        })
+      }
+    }).catch(error => {
+      console.error(error)
+      wx.showToast({
+        title: '获取订单详情失败',
+        icon: 'none'
+      })
+    })
   },
 
   /**

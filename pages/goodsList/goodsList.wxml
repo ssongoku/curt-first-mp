@@ -1,5 +1,5 @@
 <!--pages/goodsList/goodsList.wxml-->
-<view class='container-goods'>
+<view class='container-goods' wx:if="{{goodsList.length > 0}}">
   <view class='main-goods'>
     <view class='single-goods' wx:for="{{goodsList}}" wx:key="{{item._id}}" data-goods-id='{{item._id}}' bindtap='handleGoodsDetail'>
       <image class="avatar" src='{{item.bannerImages[0]}}' mode='aspectFit'></image>
@@ -10,4 +10,7 @@
       </view>
     </view>
   </view>
+</view>
+<view wx:if="{{goodsList.length == 0}}">
+  <text>没有商品呢~</text>
 </view>

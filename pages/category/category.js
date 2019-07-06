@@ -1,110 +1,12 @@
 // pages/category/category.js
+const db = wx.cloud.database()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    classifyItems: [{
-        "id": 1,
-        "name": "个人护理",
-        "ishaveChild": true,
-        "shopClassifyDtoList": [{
-            "id": 2,
-            "name": "洗护套装",
-            "imgUrl": "cloud://dev-curtfirstmp.6465-dev-curtfirstmp/category.jpg"
-          },
-          {
-            "id": 3,
-            "name": "卸妆",
-            "imgUrl": "cloud://dev-curtfirstmp.6465-dev-curtfirstmp/category.jpg"
-          },
-          {
-            "id": 4,
-            "name": "护肤套装",
-            "imgUrl": "cloud://dev-curtfirstmp.6465-dev-curtfirstmp/category.jpg"
-          }
-        ]
-      },
-      {
-        "id": 5,
-        "name": "护肤彩妆",
-        "ishaveChild": true,
-        "shopClassifyDtoList": [{
-            "id": 6,
-            "name": "面膜",
-            "imgUrl": "cloud://dev-curtfirstmp.6465-dev-curtfirstmp/category.jpg"
-          },
-          {
-            "id": 7,
-            "name": "面霜",
-            "imgUrl": "cloud://dev-curtfirstmp.6465-dev-curtfirstmp/category.jpg"
-          },
-          {
-            "id": 8,
-            "name": "晚霜",
-            "imgUrl": "cloud://dev-curtfirstmp.6465-dev-curtfirstmp/category.jpg"
-          },
-          {
-            "id": 9,
-            "name": "香水",
-            "imgUrl": "cloud://dev-curtfirstmp.6465-dev-curtfirstmp/category.jpg"
-          }
-        ]
-      },
-      {
-        "id": 10,
-        "name": "母婴",
-        "ishaveChild": false,
-        "shopClassifyDtoList": []
-      },
-      {
-        "id": 11,
-        "name": "护肤",
-        "ishaveChild": true,
-        "shopClassifyDtoList": [{
-            "id": 12,
-            "name": "气垫bb",
-            "imgUrl": "cloud://dev-curtfirstmp.6465-dev-curtfirstmp/category.jpg"
-          },
-          {
-            "id": 13,
-            "name": "隔离霜",
-            "imgUrl": "cloud://dev-curtfirstmp.6465-dev-curtfirstmp/category.jpg"
-          },
-          {
-            "id": 14,
-            "name": "修容/高光",
-            "imgUrl": "cloud://dev-curtfirstmp.6465-dev-curtfirstmp/category.jpg"
-          },
-          {
-            "id": 15,
-            "name": "遮瑕",
-            "imgUrl": "cloud://dev-curtfirstmp.6465-dev-curtfirstmp/category.jpg"
-          },
-          {
-            "id": 16,
-            "name": "腮红",
-            "imgUrl": "cloud://dev-curtfirstmp.6465-dev-curtfirstmp/category.jpg"
-          },
-          {
-            "id": 17,
-            "name": "粉底",
-            "imgUrl": "cloud://dev-curtfirstmp.6465-dev-curtfirstmp/category.jpg"
-          },
-          {
-            "id": 18,
-            "name": "粉饼",
-            "imgUrl": "cloud://dev-curtfirstmp.6465-dev-curtfirstmp/category.jpg"
-          },
-          {
-            "id": 19,
-            "name": "蜜粉/散粉",
-            "imgUrl": "cloud://dev-curtfirstmp.6465-dev-curtfirstmp/category.jpg"
-          }
-        ]
-      }
-    ],
+    classifyItems: [],
     curNav: 1,
     curIndex: 0
   },
@@ -124,7 +26,29 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    db.collection('category').where({
+      level: 1,
+      isDeleted: false
+    }).get().then(response => {
+      this.setData({
+        classifyItems: this.formatChildren(response.data)
+      })
+    })
+  },
+  formatChildren(data) {
+    if (Array.isArray(data)) {
+      return data.map(x => {
+        return {
+          id: x.index,
+          name: x.name,
+          ishaveChild: Array.isArray(x.children) && x.children.length > 0,
+          shopClassifyDtoList: this.formatChildren(x.children),
+          imgUrl: x.imgUrl || 'cloud://dev-curtfirstmp.6465-dev-curtfirstmp/category.jpg'
+        }
+      })
+    } else {
+      return []
+    }
   },
 
   /**

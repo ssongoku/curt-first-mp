@@ -1,4 +1,5 @@
 // pages/orderList/orderList.js
+const db = wx.cloud.database()
 Page({
 
   /**
@@ -41,6 +42,27 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let where = {
+      isDeleted: false
+    }
+    if (Number(options.status)) {
+      where.status = Number(options.status)
+    }
+    db.collection('order').where(where).get().then(response => {
+      if (Array.isArray(response.data)) {
+        response.data.forEach(x => {
+        })
+        this.setData({
+          orderList: response.data
+        })
+      }
+    }).catch(error => {
+      console.error(error)
+      wx.showToast({
+        title: '获取订单列表失败',
+        icon: 'none'
+      })
+    })
 
   },
   toOrderDetail: function (e) {
